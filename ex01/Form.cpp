@@ -20,9 +20,11 @@ int Form::getExecuteGrade() const {
 void Form::beSigned(const Bureaucrat &bureaucrat) {
   if (bureaucrat.getGrade() > signGrade) {
     throw std::runtime_error("Bureaucrat " + bureaucrat.getName() + " cannot sign form " + name + " because their grade is too low.");
-  } else {
+  } else if (!isSigned){
     isSigned = true;
     std::cout << bureaucrat.getName() << " signs form " << name << "." << std::endl;
+  } else {
+    std::cout << name << " already signed." << std::endl;
   }
 }
 

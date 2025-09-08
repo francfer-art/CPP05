@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include <cstdlib>
 
-class Bureaucrat; // Forward declaration to avoid circular dependency
+class Bureaucrat;
 
 class Aform {
   private:
@@ -14,7 +15,7 @@ class Aform {
     const int executeGrade;
   public:
     Aform(const std::string &name, int signGrade, int executeGrade);
-    ~Aform();
+    virtual ~Aform();
     std::string getName() const;
     bool getIsSigned() const;
     int getSignGrade() const;

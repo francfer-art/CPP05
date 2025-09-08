@@ -5,14 +5,13 @@ int main() {
   try {
     Bureaucrat b("Alice", 50);
     Form f("NDA", 30, 20);
-    f.showInfo();
-    b.signForm(f); // Alice no puede firmarlo (grade 50 > signGrade 30)
+    std::cout << b << std::endl;
+    b.signForm(f);
 
     Bureaucrat boss("Bob", 30);
-    boss.signForm(f); // Bob sí puede
+    boss.signForm(f);
 
-    // Intentar firmarlo otra vez
-    boss.signForm(f); // Ya está firmado
+    boss.signForm(f);
 
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << std::endl;

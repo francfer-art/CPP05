@@ -21,9 +21,10 @@ class Bureaucrat {
     void setGrade(int grade);
     void incrementGrade();
     void decrementGrade();
-    void showInfo() const;
     void signForm(Aform &form) const;
     void executeForm(const Aform &form) const;
 };
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &b);
+
 
 #endif

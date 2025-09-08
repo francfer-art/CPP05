@@ -18,7 +18,8 @@ class Bureaucrat {
     void setGrade(int grade);
     void incrementGrade();
     void decrementGrade();
-    void showInfo() const;
 };
+
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &b);
 
 #endif

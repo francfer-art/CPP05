@@ -15,7 +15,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const {
     if (bureaucrat.getGrade() > getExecuteGrade()) {
         throw std::runtime_error("Bureaucrat " + bureaucrat.getName() + " cannot execute form " + getName() + " because their grade is too low.");
     }
-    std::ofstream file(target + "_shrubbery");
+    std::ofstream file((target + "_shrubbery").c_str());
     if (file.is_open()) {
         file << "      🌲\n"
              << "     🌳🌳\n"

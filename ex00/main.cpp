@@ -3,18 +3,18 @@
 int main() {
     try {
         Bureaucrat b1("Alice", 42);
-        b1.showInfo();
+        std::cout << b1 << std::endl;
 
         b1.incrementGrade();
-        b1.showInfo();
+        std::cout << b1 << std::endl;
 
         b1.decrementGrade();
-        b1.showInfo();
+        std::cout << b1 << std::endl;
 
         std::cout << "--------------------------" << std::endl;
 
         Bureaucrat b2("Bob", 150);
-        b2.showInfo();
+        std::cout << b2 << std::endl;
 
         b2.decrementGrade();
     } catch (const std::exception &e) {

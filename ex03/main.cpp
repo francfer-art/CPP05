@@ -37,6 +37,10 @@ int main() {
             boss.signForm(*unknown);
             boss.executeForm(*unknown);
         }
+        delete shrubbery;
+        delete robotomy;
+        delete pardon;
+        delete unknown;
 
     } catch (const std::exception& e) {
         std::cerr << "Excepción atrapada en main: " << e.what() << std::endl;

@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Form.hpp"
 
-class Form; // Forward declaration to avoid circular dependency
+class Form;
 
 class Bureaucrat {
   private:
@@ -21,8 +21,10 @@ class Bureaucrat {
     void setGrade(int grade);
     void incrementGrade();
     void decrementGrade();
-    void showInfo() const;
     void signForm(Form &form) const;
 };
+
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &b);
+
 
 #endif

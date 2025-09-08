@@ -16,7 +16,6 @@ void RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const {
         throw std::runtime_error("Bureaucrat " + bureaucrat.getName() + " cannot execute form " + getName() + " because their grade is too low.");
     }
 
-    // Simulate a 50% chance of success
     std::cout << "Drilling noises... ";
     if (rand() % 2 == 0) {
         std::cout << target << " has been robotomized successfully!" << std::endl;

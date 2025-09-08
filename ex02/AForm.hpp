@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include <cstdlib>
 
-class Bureaucrat; // Forward declaration to avoid circular dependency
+class Bureaucrat;
 
 class Aform {
   private:
